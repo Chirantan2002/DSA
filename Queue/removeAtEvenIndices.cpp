@@ -1,6 +1,5 @@
 #include <iostream>
 #include <queue>
-#include <stack>
 using namespace std;
 
 void displayQueue(queue<int> &q)
@@ -15,21 +14,20 @@ void displayQueue(queue<int> &q)
     cout << endl;
 }
 
-void reverseQueue(queue<int> &q)
+void removeAtEven(queue<int> &q)
 {
-    stack<int> st;
-    while (!q.empty())
+    int n = q.size();
+    for (int i = 0; i < n; i++)
     {
-        int x = q.front();
-        q.pop();
-        st.push(x);
+        if (i % 2 == 0)
+            q.pop();
+        else
+        {
+            int x = q.front();
+            q.pop();
+            q.push(x);
+        }
     }
-    while (!st.empty())
-    {
-        cout << st.top() << " ";
-        st.pop();
-    }
-    cout << endl;
 }
 
 int main()
@@ -43,8 +41,6 @@ int main()
     q.push(60);
 
     displayQueue(q);
-    cout << "Front: " << q.front() << endl;
-    cout << "Back: " << q.back() << endl;
-    cout << "Size: " << q.size() << endl;
-    reverseQueue(q);
+    removeAtEven(q);
+    displayQueue(q);
 }
