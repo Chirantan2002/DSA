@@ -71,25 +71,6 @@ int levelsInTree(TreeNode *root)
     return 1 + max(levelsInTree(root->left), levelsInTree(root->right));
 }
 
-vector<string> binaryTreePaths(TreeNode *root)
-{
-    vector<string> ans;
-    if (!root)
-        return ans;
-    if (!root->left && !root->right)
-    {
-        ans.push_back(to_string(root->data));
-        return ans;
-    }
-    vector<string> left = binaryTreePaths(root->left);
-    vector<string> right = binaryTreePaths(root->right);
-    for (int i = 0; i < left.size(); i++)
-        ans.push_back(to_string(root->data) + "->" + left[i]);
-    for (int i = 0; i < right.size(); i++)
-        ans.push_back(to_string(root->data) + "->" + right[i]);
-    return ans;
-}
-
 int main()
 {
     TreeNode *root = new TreeNode(1);
@@ -109,9 +90,5 @@ int main()
     cout << "Product of all nodes: " << productOfNodes(root) << endl;
     cout << "Levels in the Tree: " << levelsInTree(root) << endl;
     cout << "Height of the Tree: " << (levelsInTree(root) - 1) << endl;
-    vector<string> paths = binaryTreePaths(root);
-    cout << "Paths in the Tree: " << endl;
-    for (int i = 0; i < paths.size(); i++)
-        cout << paths[i] << endl;
     return 0;
 }
