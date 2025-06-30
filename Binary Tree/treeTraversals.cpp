@@ -39,6 +39,36 @@ void inorderTraversal(TreeNode *root)
     inorderTraversal(root->right);
 }
 
+int levels(TreeNode *root)
+{
+    if (!root)
+        return 0;
+    return 1 + max(levels(root->left), levels(root->right));
+}
+
+void printNthLevel(TreeNode *root, int lvl, int req)
+{
+    if (!root)
+        return;
+    if (lvl == req)
+    {
+        cout << root->data << " ";
+        return;
+    }
+    printNthLevel(root->right, lvl + 1, req);
+    printNthLevel(root->left, lvl + 1, req);
+}
+
+void levelOrderTraversal(TreeNode *root)
+{
+    int n = levels(root);
+    for (int i = 0; i < n; i++)
+    {
+        printNthLevel(root, 0, i);
+        cout << endl;
+    }
+}
+
 int main()
 {
     TreeNode *root = new TreeNode(1);
@@ -64,4 +94,6 @@ int main()
     cout << endl;
     cout << "Postorder Traversal: ";
     postorderTraversal(root);
+    cout << endl;
+    levelOrderTraversal(root);
 }

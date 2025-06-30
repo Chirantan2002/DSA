@@ -11,19 +11,25 @@ public:
     TreeNode(int val) : data(val), left(NULL), right(NULL) {}
 };
 
-    int height(TreeNode* root) {
-        if(!root) return 0;
-        int leftHeight = height(root->left);
-        int rightHeight = height(root->right);
-        if(leftHeight == -1 || rightHeight == -1 || abs(leftHeight - rightHeight) > 1) return -1;
-        return max(leftHeight, rightHeight) + 1;
-    }
+int height(TreeNode *root)
+{
+    if (!root)
+        return 0;
+    int leftHeight = height(root->left);
+    int rightHeight = height(root->right);
+    if (leftHeight == -1 || rightHeight == -1 || abs(leftHeight - rightHeight) > 1)
+        return -1;
+    return max(leftHeight, rightHeight) + 1;
+}
 
-    bool isBalanced(TreeNode* root) {
-        if(!root) return true;
-        if(height(root) == -1) return false;
+bool isBalanced(TreeNode *root)
+{
+    if (!root)
         return true;
-    }
+    if (height(root) == -1)
+        return false;
+    return true;
+}
 
 int main()
 {

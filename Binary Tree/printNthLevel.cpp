@@ -16,7 +16,10 @@ void printNthLevel(TreeNode *root, int lvl, int req)
     if (!root)
         return;
     if (lvl == req)
+    {
         cout << root->data << " ";
+        return;
+    }
     printNthLevel(root->left, lvl + 1, req);
     printNthLevel(root->right, lvl + 1, req);
 }
