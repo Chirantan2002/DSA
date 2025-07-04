@@ -16,21 +16,19 @@ public:
 
 TreeNode* construct(int arr[], int n){ // constructing the tree
     queue<TreeNode*> q;
-    TreeNode* root = new TreeNode(arr[0]);
+    TreeNode *root = new TreeNode(arr[0]);
     q.push(root);
-    int i = 1;
-    int j = 2;
+    int i = 1, j = 2;
     while(!q.empty() && i < n){
-        TreeNode *temp = q.front();
+        TreeNode *node = q.front();
         q.pop();
-        TreeNode *l;
-        TreeNode *r;
+        TreeNode *l, *r;
         if(arr[i] != INT_MIN) l = new TreeNode(arr[i]);
         else l = nullptr;
         if(j != n && arr[j] != INT_MIN) r = new TreeNode(arr[j]);
         else r = nullptr;
-        temp->left = l;
-        temp->right = r;
+        node->left = l;
+        node->right = r;
         if(l) q.push(l);
         if(r) q.push(r);
         i += 2;
