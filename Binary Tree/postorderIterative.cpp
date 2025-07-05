@@ -16,13 +16,17 @@ class TreeNode{
 void postorderIterative(TreeNode *root){
     stack<TreeNode*> st;
     st.push(root);
-    vector<int> ans;
+    vector<int> temp;
     while(!st.empty()){
         TreeNode *node = st.top();
         st.pop();
-        cout << node->val << " ";
-        if(node->right) st.push(node->right);
+        temp.push_back(node->val);
         if(node->left) st.push(node->left);
+        if(node->right) st.push(node->right);
+    }
+    reverse(begin(temp), end(temp));
+    for(auto &x : temp){
+        cout << x << " ";
     }
     cout << endl;
 }
