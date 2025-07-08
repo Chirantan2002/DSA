@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stack>
 #include <vector>
 #include <algorithm>
 using namespace std;
@@ -22,9 +21,9 @@ void leftBoundary(TreeNode *root){
 
 void rightBoundary(TreeNode *root){
     if(!root || (!root->left && !root->right)) return;
-    cout << root->val << " ";
     if(root->right) rightBoundary(root->right);
     else rightBoundary(root->left);
+    cout << root->val << " ";
 }
 
 void leafNodes(TreeNode *root){
@@ -51,6 +50,9 @@ int main() {
     root->left->right = new TreeNode(5);
     root->right->left = new TreeNode(6);
     root->right->right = new TreeNode(7);
+    root->left->left->left = new TreeNode(8);
+    root->right->left->right = new TreeNode(9);
+    root->right->left->right->left = new TreeNode(10);
 
     boundaryTraversal(root);
 }
