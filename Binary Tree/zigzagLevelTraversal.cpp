@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <queue>
 #include <algorithm>
 using namespace std;
 
@@ -46,6 +47,30 @@ void helper(TreeNode *root, vector<vector<int>> &ans)
     }
 }
 
+vector<vector<int>> zigzagTraversal(TreeNode *root){
+    vector<vector<int>> ans;
+    if(!root) return ans;
+
+    queue<TreeNode*> q;
+    q.push(root);
+    bool flag = false;
+    while(!q.empty()){
+        int sz = q.size();
+        vector<int> level;
+        for(int i = 0;i < sz;++i){
+            TreeNode *node = q.front();
+            q.pop();
+            level.push_back(node->data);
+            if(node->left) q.push(node->left);
+            if(node->right) q.push(node->right);
+        }
+        if(flag) reverse(begin(level), end(level));
+        ans.push_back(level);
+        flag = !flag;
+    }
+    return ans;
+}
+
 int main()
 {
     TreeNode *root = new TreeNode(3);
@@ -54,7 +79,8 @@ int main()
     root->right->left = new TreeNode(15);
     root->right->right = new TreeNode(7);
     vector<vector<int>> ans;
-    helper(root, ans);
+    ans = zigzagTraversal(root);
+    // helper(root, ans);
     for (auto &v : ans)
     {
         for (auto &x : v)

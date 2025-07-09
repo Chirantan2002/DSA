@@ -5,10 +5,11 @@ using namespace std;
 
 void DFS(unordered_map<int, vector<int>>& adj, int src, vector<bool>& visited, vector<int>& dfsResult)
 {
-    if (visited[src]) // Fixed typo here
-        return;               // If the vertex is already visited, return
-    visited[src] = true;      // Mark the current vertex as visited
-    dfsResult.push_back(src); // Add the current vertex to the DFS result
+    if (visited[src]) return;   // Fixed typo here
+                                // If the vertex is already visited, return
+                                
+    visited[src] = true;        // Mark the current vertex as visited
+    dfsResult.push_back(src);   // Add the current vertex to the DFS result
     for (auto neighbor : adj[src])
     {
         if (!visited[neighbor])
