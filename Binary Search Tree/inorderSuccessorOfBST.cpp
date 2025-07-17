@@ -52,7 +52,8 @@ TreeNode *creatBST(const vector<int> &levelOrder)
 TreeNode *inorderSuccessor(TreeNode *root)
 {
     TreeNode *succ = root->right;
-    while(succ->left){
+    while (succ->left)
+    {
         succ = succ->left;
     }
     return succ;
@@ -61,7 +62,8 @@ TreeNode *inorderSuccessor(TreeNode *root)
 TreeNode *inorderPredecessor(TreeNode *root)
 {
     TreeNode *pred = root->left;
-    while(pred->right){
+    while (pred->right)
+    {
         pred = pred->right;
     }
     return pred;
@@ -91,8 +93,8 @@ int main()
     printLevelOrder(root);
     cout << endl;
     TreeNode *succ = inorderSuccessor(root);
-    cout << succ->data;
+    cout << "Successor: " << succ->data;
     cout << endl;
     TreeNode *pred = inorderPredecessor(root);
-    cout << pred->data;
+    cout << "Predecessor: " << pred->data;
 }
