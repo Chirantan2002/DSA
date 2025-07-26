@@ -34,7 +34,8 @@ int main()
     int k = 1;
     vector<vector<int>> result = kClosest(arr, k);
     for (auto it : result)
-        for(auto x : it) cout << x << " ";
+        for (auto x : it)
+            cout << x << " ";
     cout << endl;
     return 0;
 }
