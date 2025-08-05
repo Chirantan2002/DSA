@@ -130,3 +130,8 @@ https://leetcode.com/problems/k-radius-subarray-averages/
 2411. Smallest Subarrays With Maximum Bitwise OR (bit, sliding window, binary search)
 2419. Longest Subarray With Maximum Bitwise AND (bit, brainteaser)
 898. Bitwise ORs of Subarrays (bit, DP)
+118. Pascal's Triangle (easy, DP)
+2561. Rearranging Fruits (hard, hash, greedy, sorting)
+2106. Maximum Fruits Harvested After at Most K Steps (hard, sliding window, prefix, binary search)
+904. Fruit Into Baskets (medium, hash, sliding window)
+3477. Fruits Into Baskets II (easy, simulation)
