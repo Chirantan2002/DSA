@@ -13,6 +13,10 @@ https://leetcode.com/problems/subarray-sums-divisible-by-k/
 https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/
 https://leetcode.com/problems/k-radius-subarray-averages/
 
+# Segment tree questions of LeetCode
+
+https://leetcode.com/problem-list/segment-tree/
+
 # Heap leetcode problems
 
 215. Kth Largest Element in an Array
@@ -135,3 +139,4 @@ https://leetcode.com/problems/k-radius-subarray-averages/
 2106. Maximum Fruits Harvested After at Most K Steps (hard, sliding window, prefix, binary search)
 904. Fruit Into Baskets (medium, hash, sliding window)
 3477. Fruits Into Baskets II (easy, simulation)
+3479. Fruits Into Baskets III (medium, segment tree, binary search)
