@@ -150,3 +150,7 @@ https://leetcode.com/problem-list/segment-tree/
 2264. Largest 3-Same-Digit Number in String (easy, string)
 342. Power of Four (easy, bit, recursion)
 1323. Maximum 69 Number (easy, greedy)
+837. New 21 Game (medium, dp, sliding window)
+679. 24 Game (hard, backtracking)
+2348. Number of Zero-Filled Subarrays (medium, Math)
+1277. Count Square Submatrices with All Ones (medium, DP)
