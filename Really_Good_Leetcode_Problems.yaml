@@ -154,3 +154,4 @@ https://leetcode.com/problem-list/segment-tree/
 679. 24 Game (hard, backtracking)
 2348. Number of Zero-Filled Subarrays (medium, Math)
 1277. Count Square Submatrices with All Ones (medium, DP)
+1504. Count Submatrices With All Ones (medium, dp, stack)
