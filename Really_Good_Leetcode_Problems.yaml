@@ -155,3 +155,5 @@ https://leetcode.com/problem-list/segment-tree/
 2348. Number of Zero-Filled Subarrays (medium, Math)
 1277. Count Square Submatrices with All Ones (medium, DP)
 1504. Count Submatrices With All Ones (medium, dp, stack)
+3197. Find the Minimum Area to Cover All Ones II (hard, math, enumeration)
+1493. Longest Subarray of 1's After Deleting One Element (medium, dp, sliding window)
