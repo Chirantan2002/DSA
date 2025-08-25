@@ -157,3 +157,4 @@ https://leetcode.com/problem-list/segment-tree/
 1504. Count Submatrices With All Ones (medium, dp, stack)
 3197. Find the Minimum Area to Cover All Ones II (hard, math, enumeration)
 1493. Longest Subarray of 1's After Deleting One Element (medium, dp, sliding window)
+498. Diagonal Traverse (medium, matrix, simulation)
