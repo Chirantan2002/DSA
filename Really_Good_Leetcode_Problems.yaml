@@ -158,3 +158,6 @@ https://leetcode.com/problem-list/segment-tree/
 3197. Find the Minimum Area to Cover All Ones II (hard, math, enumeration)
 1493. Longest Subarray of 1's After Deleting One Element (medium, dp, sliding window)
 498. Diagonal Traverse (medium, matrix, simulation)
+3000. Maximum Area of Longest Diagonal Rectangle (easy, array)
+3459. Length of Longest V-Shaped Diagonal Segment (hard, dp, memoization, matrix)
+3021. Alice and Bob Playing Flower Game (medium, Math)
