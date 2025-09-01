@@ -162,3 +162,5 @@ https://leetcode.com/problem-list/segment-tree/
 3459. Length of Longest V-Shaped Diagonal Segment (hard, dp, memoization, matrix)
 3021. Alice and Bob Playing Flower Game (medium, Math)
 36. Valid Sudoku (medium, hash table, matrix)
+37. Sudoku Solver (hard, backtracking, hash, matrix)
+1792. Maximum Average Pass Ratio (medium, greedy, heap)
